@@ -11,12 +11,12 @@ class xyloPhoneApp extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: TextButton(
-              onPressed: () {
-                final Player = AudioCache();
-                Player.play('note1.wav');
-              },
-              child: Text('Click Me!'),
-            ),
+                onPressed: (){
+                  final Player = AudioCache();
+                  Player.play('note5.wav');
+                },
+                child: Text('Play Now !'),
+          ),
           ),
         ),
       ),
