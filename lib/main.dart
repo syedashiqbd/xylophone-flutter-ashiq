@@ -4,6 +4,12 @@ import 'package:audioplayers/audioplayers.dart';
 void main() => runApp(xyloPhoneApp());
 
 class xyloPhoneApp extends StatelessWidget {
+
+  void playSound(int soundNumber) {
+    final Player = AudioCache();
+    Player.play('note$soundNumber.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,63 +24,7 @@ class xyloPhoneApp extends StatelessWidget {
                     color: Colors.red,
                   ),
                   onTap: () {
-                    final Player = AudioCache();
-                    Player.play('note1.wav');
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.green,
-                  ),
-                  onTap: () {
-                    final Player = AudioCache();
-                    Player.play('note2.wav');
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.blue,
-                  ),
-                  onTap: () {
-                    final Player = AudioCache();
-                    Player.play('note3.wav');
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.teal,
-                  ),
-                  onTap: () {
-                    final Player = AudioCache();
-                    Player.play('note4.wav');
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.purple,
-                  ),
-                  onTap: () {
-                    final Player = AudioCache();
-                    Player.play('note5.wav');
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.cyan,
-                  ),
-                  onTap: () {
-                    final Player = AudioCache();
-                    Player.play('note6.wav');
+                    playSound(1);
                   },
                 ),
               ),
@@ -84,8 +34,57 @@ class xyloPhoneApp extends StatelessWidget {
                     color: Colors.orange,
                   ),
                   onTap: () {
-                    final Player = AudioCache();
-                    Player.play('note7.wav');
+                    playSound(2);
+                  },
+                ),
+              ),
+              Expanded(
+                child: InkWell(
+                  child: Container(
+                    color: Colors.yellow,
+                  ),
+                  onTap: () {
+                    playSound(3);
+                  },
+                ),
+              ),
+              Expanded(
+                child: InkWell(
+                  child: Container(
+                    color: Colors.teal,
+                  ),
+                  onTap: () {
+                    playSound(4);
+                  },
+                ),
+              ),
+              Expanded(
+                child: InkWell(
+                  child: Container(
+                    color: Colors.purple,
+                  ),
+                  onTap: () {
+                    playSound(5);
+                  },
+                ),
+              ),
+              Expanded(
+                child: InkWell(
+                  child: Container(
+                    color: Colors.pink,
+                  ),
+                  onTap: () {
+                    playSound(6);
+                  },
+                ),
+              ),
+              Expanded(
+                child: InkWell(
+                  child: Container(
+                    color: Colors.blue,
+                  ),
+                  onTap: () {
+                    playSound(7);
                   },
                 ),
               ),
