@@ -10,84 +10,34 @@ class xyloPhoneApp extends StatelessWidget {
     Player.play('note$soundNumber.wav');
   }
 
+  Expanded buildKey({Color? color,  required int soundNumber}) {
+    return Expanded(
+      child: InkWell(
+        child: Container(
+          color: color,
+        ),
+        onTap: () {
+          playSound(soundNumber);
+        },
+      ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.red,
-                  ),
-                  onTap: () {
-                    playSound(1);
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.orange,
-                  ),
-                  onTap: () {
-                    playSound(2);
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.yellow,
-                  ),
-                  onTap: () {
-                    playSound(3);
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.teal,
-                  ),
-                  onTap: () {
-                    playSound(4);
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.purple,
-                  ),
-                  onTap: () {
-                    playSound(5);
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.pink,
-                  ),
-                  onTap: () {
-                    playSound(6);
-                  },
-                ),
-              ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.blue,
-                  ),
-                  onTap: () {
-                    playSound(7);
-                  },
-                ),
-              ),
+              buildKey(color: Colors.red, soundNumber:1),
+              buildKey(color: Colors.yellow, soundNumber:2),
+              buildKey(color: Colors.green, soundNumber:3),
+              buildKey(color: Colors.blue, soundNumber:4),
+              buildKey(color: Colors.teal, soundNumber:5),
+              buildKey(color: Colors.pink, soundNumber:6),
+              buildKey(color: Colors.cyan, soundNumber:7),
             ],
           ),
         ),
